@@ -1,4 +1,95 @@
-*{
+* {
     padding: 0;
     margin: 0;
+}
+
+menu {
+    width: 100%;
+    height: 100px;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+}
+
+.menu-izquierda {
+    width: 150px;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box; /* incluye borde dentro del ancho */
+    border: 2px solid darkred; /* borde rojo */
+    padding: 6px; /* espacio entre contenido y borde */
+}
+
+.menu-derecha {
+    width: 90%;
+    height: 100%;
+    background-color:black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+    padding: 0 20px 0 0;
+}
+.menu-derecha a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    margin: 5px;
+    padding: 10px;
+}
+
+@media screen and (max-width: 1000px) {
+    .menu-normal {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: black;
+        min-width: 160px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        border-radius: 6px;
+        overflow: hidden;
+    }
+
+    .hamburguer-icon {
+        width: 40px;
+        height: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .hamburguer-icon span {
+        background-color: white;
+        width: 100%;
+        height: 6px;
+        display: block;
+        border-radius: 3px;
+    }
+
+    .menu-container {
+        position: relative; /* posiciona el dropdown respecto a este contenedor */
+    }
+
+    .menu-container.menu-open .menu-normal {
+        z-index: 999;
+        display: flex;
+        flex-direction: column;
+        /* desplegar pegado al borde de la pantalla */
+           position: fixed;
+           right: 0;         /* pegado al borde derecho */
+           left: auto;
+           top: 100px; /* ajusta si tu header cambia de altura */
+           width: 260px; /* ancho fijo del dropdown */
+        padding: 8px 0;
+           border-radius: 6px 0 0 6px; /* redondeo solo en el lado izquierdo */
+           align-items: center;
+    }
+
 }

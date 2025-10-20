@@ -1,5 +1,5 @@
 <?php require_once "./vistas/vista_superior.php"?>
 
-Esta es la pagina principal
+Higiene
 
 <?php require_once "./vistas/vista_inferior.php"?>

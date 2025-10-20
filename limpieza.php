@@ -1,5 +1,5 @@
 <?php require_once "./vistas/vista_superior.php"?>
 
-Esta es la pagina principal
+Limpieza
 
 <?php require_once "./vistas/vista_inferior.php"?>

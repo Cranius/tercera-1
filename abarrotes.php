@@ -1,5 +1,5 @@
 <?php require_once "./vistas/vista_superior.php"?>
 
-Clientes
+Abarrotes
 
 <?php require_once "./vistas/vista_inferior.php"?>
